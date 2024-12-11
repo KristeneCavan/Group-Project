@@ -46,8 +46,8 @@ hr{
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    background: #252525;
-    color: #fff;
+    background: #0120ce;
+    color: #ffee51;
     padding: 20px 30px;
 }
 
@@ -63,7 +63,7 @@ hr{
 }
 
 .nav-bar{
-    background: #333;
+    background: #0120ce;
     height: 0;
     overflow: hidden;
 }
@@ -82,11 +82,11 @@ hr{
 }
 
 .nav-bar ul li:hover{
-    background: #0e0e0e;
+    background: #0120ce;
 }
 
 .nav-bar ul li a{
-    color: #fff;
+    color: #ffee51;
     text-transform: uppercase;
 }
 
@@ -127,7 +127,7 @@ hr{
 
 .banner-main-content button{
     border: none;
-    background: #252525;
+    background: #0120ce;
     padding: 14px 18px;
     font-size: 1.2rem;
     font-family: 'Montserrat', sans-serif;
@@ -144,7 +144,7 @@ hr{
 }
 
 .banner-main-content button:hover a{
-    color: #0d0a0b;
+    color: #0120ce;
 }
 
 
@@ -339,7 +339,7 @@ main a:hover{
 /****** footer *****/
 
 footer{
-    background: #252525;
+    background: #0120ce;
     color: #f3f3f3;
     padding: 30px;
 }
@@ -452,7 +452,7 @@ footer > p{
 
     .navigation-container{
         display: flex;
-        background: #252525;
+        background: #0120ce;
         align-items: center;
         flex-wrap: wrap;
     }
