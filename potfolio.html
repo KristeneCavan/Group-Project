@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon">
+
+    <title>UCNews</title>
+    <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.logo {
+    font-size: 45px;
+    font-weight: bold;
+    color: white;
+}
+.logo span {
+    color: #ffcc00;
+}
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Ubuntu', sans-serif;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Header Styles */
+.header {
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background: rgb(62,88,121);
+background: linear-gradient(90deg, rgba(62,88,121,1) 0%, rgba(58,109,140,1) 35%, rgba(106,154,176,1) 100%);
+
+
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.nav-links {
+    color: white;
+  list-style-type: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+  color: white;!
+}
+
+.nav-links a {
+    color: white;!
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.cta a {
+  background-color: #78B3CE;
+  color: white;
+  padding: 8px 15px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 700;
+}
+
+/* Intro Section */
+.intro {
+    margin-left: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 50px;
+  background-color: #fff;
+}
+
+.intro-content {
+  display: flex;
+  align-items: center;
+}
+
+.greeting {
+  max-width: 50%;
+}
+.greeting span{
+    color: #A294F9;
+}
+.greeting h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.greeting p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.greeting .btn-container {
+  margin-top: 20px;
+}
+
+.greeting .btn {
+  background-color:#89A8B2;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.greet {
+  max-width: 50%;
+}
+.greet span{
+    color: #FFCFEF;
+}
+.greet h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.greet p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.greet .btn-container {
+  margin-top: 20px;
+}
+
+.greet .btn {
+  background-color:#89A8B2;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.greets {
+  max-width: 50%;
+}
+.greets span{
+    color: #37AFE1;
+}
+.greets h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.greets p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.greets .btn-container {
+  margin-top: 20px;
+}
+
+.greets .btn {
+  background-color:#89A8B2;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.intro-image img {
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin-left: 145px;
+}
+.intro-image img:hover {
+  transform: translateY(-10px); /* Moves the image 10px upwards */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow for a subtle floating effect */
+}
+
+.skills h4 {
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.skills p {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+/* Clients Section */
+.clients {
+  padding: 80px 50px;
+  text-align: center;
+}
+
+.clients h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.clients-meeting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.meeting-image img {
+  width: 400px;
+  height: 250px;
+  border-radius: 10px;
+}
+
+.video-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-btn img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+.contact-page {
+    margin: 10px auto;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    background-color: #82b983;
+    padding: 20px;
+    text-align: center;
+    margin-top: ;
+}
+
+.header h1 {
+    font-size: 2.8rem;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
+.sidebar {
+    flex-direction: row;
+    width: 30%;
+    background-color: #eaf5ea;
+    padding: 20px;
+    border-radius: 8px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.profile-section {
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 4px solid #72BAA9;
+    gap: 175px;
+}
+ 
+#hi:hover{
+    content: url(images/gorgeous.jpg);
+    cursor: pointer;
+}
+#hello:hover{
+    content: url(images/yess.jpg);
+    cursor: pointer;
+}
+
+#hii:hover{
+    content: url(images/k4.jpg);
+    cursor: pointer;
+}
+#helloo:hover{
+    content: url(images/k5.jpg);
+    cursor: pointer;
+}
+
+#hiii:hover{
+    content: url(images/b4.jpg);
+    cursor: pointer;
+}
+#helloooo:hover{
+    content: url(images/b5.jpg);
+    cursor: pointer;
+}
+
+.sidebar h2 {
+    flex-direction: row;
+    font-size: 2rem;
+    color: #608BC1;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.contact-info h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    color: #555;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+
+.bio {
+    width: 70%;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.bio h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.bio p {
+    line-height: 1.7;
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+blockquote {
+    background-color: #eaf5ea;
+    padding: 15px;
+    margin: 15px 0;
+    border-left: 5px solid #81BFDA;
+    font-style: italic;
+    color: #555;
+    line-height: 1.5;
+    border-radius: 4px;
+}
+
+.bio blockquote:first-of-type {
+    margin-top: 0;
+}
+.tooltip-container {
+  --background: #7579e7;
+  background: var(--background);
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 17px;
+  border-radius: 10px;
+  width: 8em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -150px;
+}
+
+.tooltip {
+  position: absolute;
+  top: 0;
+  left: 30%;
+  transform: translateX(-50%);
+  padding: 0.3em 0.6em;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+  background: var(--background);
+  border-radius: 5px;
+  width: 7em;
+  text-align: center;
+  margin-left: 100px;
+}
+
+.tooltip::before {
+  position: absolute;
+  content: "";
+  height: 0.6em;
+  width: 0.6em;
+  bottom: -0.2em;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  background: var(--background);
+}
+
+.tooltip-container:hover .tooltip {
+  top: -100%;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  animation: shake 500ms ease-in-out forwards;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(-3deg);
+  }
+  70% {
+    transform: rotate(3deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.text {
+  position: relative;
+  padding: 0.7em 1.8em;
+  overflow: hidden;
+}
+
+.text::before {
+  content: "(^_^)/";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: inherit;
+  background-color: var(--background);
+  transition: 0.3s;
+}
+
+.tooltip-container:hover .text::before {
+  top: 0;
+}
+
+    </style>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UCNews</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+        <a href="index.html">
+            <div class="logo">UC<span>News</span></div>
+        </a>
+      <ul class="nav-links">
+        <li><a href="index.html">HOME</a></li>
+                <li><a href="#">CURRENT AFFAIRS</a></li>
+                <li><a href="#">PORTFOLIO</a></li>
+                <li><a href="category.html">CATEGORY</a></li>
+      </ul>
+      <div class="cta"><a href="#">Contact Us</a></div>
+    </nav>
+  </header>
+
+  <section class="intro">
+    <div class="intro-content">
+      <div class="greeting">
+        <h1>Hello, I’m <span>Lovely</span>.</h1>
+        <p>I am currently pursuing a Bachelor of Science in Information Technology (BSIT). With a passion for becoming visually sophisticated and technologically proficient, I am dedicated with improving my skills in the ever-evolving tech industry. I’m excited to gain diverse experiences that will allow me to explore various faces of technology, from design to development I'm excited to take on new challenges and possibilities that will help build my future in this dynamic field.</p>
+        <div class="btn-container">
+          <a href="#" class="btn">Learn More</a>
+        </div>
+      </div>
+      <div class="intro-image">
+        <img src="images/lovely.jpg" alt="">
+ <div class="tooltip-container">
+  <span class="tooltip">Hey There!</span>
+  <span class="text">Hello!</span>
+</div>
+
+      </div>
+    </div>
+
+    
+  </section>
+
+  <section class="intro">
+    <div class="intro-content">
+      <div class="greet">
+        <h1>Hello, I’m <span>Kristene</span>.</h1>
+        <p>“My name is Kristene Mae Cavan, and I’m an IT student with a love for computers, problem-solving, and creativity . I’m especially interested in coding, network systems, cybersecurity, and data analysis, as I aim to master these technical skills to contribute meaningfully to the tech industry. Beyond academics, I love exploring new places while traveling and enjoy immersing myself in video games, which fuel my creativity and strategic thinking. I’m excited about combining my interests to develop innovative ideas that enhance my personal growth .”
+    </p>
+        <div class="btn-container">
+          <a href="#" class="btn">Learn More</a>
+        </div>
+      </div>
+      <div class="intro-image">
+        <img src="images/k1.jpg" alt="">
+        <br>
+        <div class="tooltip-container">
+            <span class="tooltip">Hey There!</span>
+            <span class="text">Hello!</span>
+      </div>
+    </div>
+
+    
+  </section>
+
+  <section class="intro">
+    <div class="intro-content">
+      <div class="greets">
+        <h1>Hello, I’m <span>Brigette</span>.</h1>
+        <p>"Hello everyone! My name is Lorraine Brigette Mendez , and I’m excited to start my journey as an IT student here. I have a strong interest in technology, problem-solving, and learning how systems work. Whether it’s exploring programming, networking, or emerging technologies like AI and cybersecurity, I’m eager to expand my knowledge and skills in this field.
+
+            I’m looking forward to collaborating with my classmates, learning from my instructors, and contributing to projects.</p>
+        <div class="btn-container">
+          <a href="#" class="btn">Learn More</a>
+        </div>
+      </div>
+      <div class="intro-image">
+        <img src="images/b1.jpg" alt="">
+        <div class="tooltip-container">
+            <span class="tooltip">Hey There!</span>
+            <span class="text">Hello!</span>
+      </div>
+    </div>
+
+    
+  </section>
+
+
+  <section class="clients"><div class="contact-page">
+        <div class="header">
+            <h1>About Us</h1>
+        </div>
+        <div class="content">
+            <div class="sidebar">
+                <div class="profile-section">
+                    <h2 class="qwe">Lovely Mae Cabarrubias</h2>
+                  
+                    <img id="hi" src="images/mae.jpg" alt="Lovely Mae Cabarrubias" class="profile-img">
+                
+                    <img id="hello" src="images/pretty.jpg" alt="Lovely Mae Cabarrubias" class="profile-img">
+                   
+                </div>
+                <div class="contact-info">
+                <p><span class="icon">📧</span> cabarrubiaslovely@gmail.com
+                 
+                </div>
+                <blockquote>“ I am a first-year student at the University of Cebu, pursuing a degree in Information Technology. I am passionate about excelling in any field related to my studies, and I am committed to deepening my understanding of the complex concepts that this degree entails. As I navigate my academic journey, I find that my skills are continually developing, allowing me to tackle challenges with confidence. In my downtime, I enjoy immersing myself in films like Pride and Prejudice and The Notebook, and I’m a big fan of the Harry Potter series. My taste in music is quite diverse, ranging from rap and pop to calming melodies that help me unwind. I look forward to the experiences and opportunities that lie ahead as I continue to grow both personally and professionally in the tech industry.”</blockquote>
+
+            </div>
+
+            <div class="sidebar">
+                <div class="profile-section">
+                    <h2 class="qwe">Kristene S. <br>Cavan</h2>
+                  
+                    <img id="hii" src="images/k2.jpg" alt="Kristene" class="profile-img">
+                
+                    <img id="helloo" src="images/k3.jpg" alt="Kristene" class="profile-img">
+                   
+                </div>
+                <div class="contact-info">
+                <p><span class="icon">📧</span> kristenecahan888@gmail.com
+                 
+                </div>
+                <blockquote>“ I’m 18-year-old first-year college student who loves exploring new places and cultures through traveling. My love for food often leads me to try different cuisines wherever I go, making every trip a new adventure for my taste buds. I also enjoy collecting cute items, especially in shades of pink, which adds a touch of charm to my daily life. Dressing up is another passion of mine—it’s my way of expressing creativity and feeling confident. Through these hobbies, I find joy in discovering beauty and inspiration in the world around me.”</blockquote>
+
+            </div>
+
+            <div class="sidebar">
+                <div class="profile-section">
+                    <h2 class="qwe">Lorraine Brigette Medez</h2>
+                  
+                    <img id="hiii" src="images/b2.jpg" alt="Brigette" class="profile-img">
+                
+                    <img id="helloooo" src="images/b3.jpg" alt="Brigette" class="profile-img">
+                   
+                </div>
+                <div class="contact-info">
+                <p><span class="icon">📧</span> Lbrigettehp@gmail.com
+                 
+                </div>
+                <blockquote>“ Hello everyone! My name is Lorraine Brigette Mendez, and I’m thrilled to begin my journey as a new IT student. I’ve always been fascinated by technology and how it connects the world, so I’m excited to dive into programming, networking, and creative design within the IT field.
+
+                    Beyond my interest in tech, I’m also passionate about painting, designing, drawing, and playing volleyball. These hobbies allow me to express my creativity, stay active, and balance my love for both art and technology. I believe my creative side will bring a fresh perspective to IT projects and problem-solving.
+                    
+                    I’m really looking forward to learning, collaborating with all of you, and growing together in this exciting field. If you share any of my interests or have tips to share as I start this journey, I’d love to connect and learn from you. Let’s make this a fun and productive experience!.”</blockquote>
+
+            </div>
+         
+        </div>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Fatima. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
+</body>
+</html>
