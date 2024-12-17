@@ -199,7 +199,7 @@ hr{
 .hot-topic h2{
     padding: 10px 0;
     font-size: 18px;
-    text-shadow: 0 0 2px #000;
+    text-shadow: 0 0 2px #f3f3f3;
 }
 
 .hot-topic h3{
